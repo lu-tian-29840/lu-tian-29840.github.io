@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Research – LU TIAN</title>
-  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/main.css?v=styleA2">
 </head>
 <body>
-  <!-- Tiny include: shared header/nav -->
+  <!-- Shared header/nav from the site root -->
   <div id="nav"></div>
   <script>
     fetch('/nav.html').then(r => r.text()).then(h => {
@@ -51,42 +51,53 @@
     <h3>(2) Publications under Review</h3>
     <ul>
       <li>
-        <strong>Lu Tian</strong>, Patricia Drentea. “Family Members’ Education and Cognitive Functioning Among Older Adults”
-        (R&amp;R with <em>Journal of Population Aging</em>) <span style="opacity:.7;">(code)</span>.
+        <strong>Lu Tian</strong>, Patricia Drentea.
+        “Family Members’ Education and Cognitive Functioning Among Older Adults”
+        (R&amp;R with <em>Journal of Population Aging</em>)
+        <span class="pub-links">(
+          <a href="https://github.com/lu-tian-29840/Family-Members-Education-and-Cognitive-Function-of-Older-Adults" target="_blank" rel="noopener">code</a>
+        )</span>.
         <p style="margin-top:8px;">
-          I examine how the education levels of older adults’ parents and their adult children influence cognitive outcomes in later life.
-          Using generalized linear modeling, inverse-probability-of-attrition weighting, and mediation analysis to address sample
-          attrition and explore behavioral pathways, I find that higher education among adult children is linked to better cognitive
-          function in older adults, independent of the education levels of the older adults themselves and their parents. The positive
-          effect of education on cognition may be partly explained by more moderate drinking behaviors. This work received the William
-          Cockerham Paper Award for best graduate student paper in 2023.
+          I examine how the education levels of older adults’ parents and their adult children influence cognitive outcomes
+          in later life. Using generalized linear modeling, inverse-probability-of-attrition weighting, and mediation analysis
+          to address sample attrition and explore behavioral pathways, I find that higher education among adult children is
+          linked to better cognitive function in older adults, independent of the education levels of the older adults
+          themselves and their parents. The positive effect of education on cognition may be partly explained by more moderate
+          drinking behaviors. This work received the William Cockerham Paper Award for best graduate student paper in 2023.
         </p>
       </li>
 
       <li>
-        <strong>Lu Tian</strong>, Patricia Drentea. “A Biological Embodiment of Caregiving: A Longitudinal Study of Transitions and
-        Gender Differences in Epigenetic Aging” (under review with <em>Advances in Life Course Research</em>)
-        <span style="opacity:.7;">(code)</span>.
+        <strong>Lu Tian</strong>, Patricia Drentea.
+        “A Biological Embodiment of Caregiving: A Longitudinal Study of Transitions and Gender Differences in Epigenetic Aging”
+        (under review with <em>Advances in Life Course Research</em>)
+        <span class="pub-links">(
+          <a href="https://github.com/lu-tian-29840/A-Biological-Embodiment-of-Caregiving" target="_blank" rel="noopener">code</a>
+        )</span>.
         <p style="margin-top:8px;">
-          Selection bias is a concern in caregiving research, since healthier older adults may be more likely to take on caregiving roles.
-          To address this, I designed a study using propensity-score methods to strengthen causal inference. Using propensity-score weighting
-          with a machine-learning model to better isolate the effects of starting or stopping caregiving on DNA methylation age, I created
-          new caregiver variables that account for transitions into and out of caregiving and the intensity of care provided. Results show
-          that men experienced faster biological aging when they began high-intensity caregiving, while women showed a significant slowing
-          of aging when they continued in moderate-intensity caregiving roles.
+          Selection bias is a concern in caregiving research, since healthier older adults may be more likely to take on
+          caregiving roles. To address this, I designed a study using propensity-score methods to strengthen causal inference.
+          Using propensity-score weighting with a machine-learning model to isolate the effects of starting or stopping
+          caregiving on DNA methylation age, I created caregiver variables that account for transitions into and out of
+          caregiving and the intensity of care provided. Results show that men experienced faster biological aging when they
+          began high-intensity caregiving, while women showed a significant slowing of aging when they continued in
+          moderate-intensity caregiving roles.
         </p>
       </li>
 
       <li>
-        <strong>Lu Tian</strong>, Patricia Drentea. “The Role of Social Ties in the Cognitive Function of Informal Caregivers:
-        Findings from a Population-Based Propensity-Matched Analysis” (under review with <em>Journal of Aging and Research</em>)
-        <span style="opacity:.7;">(code)</span>.
+        <strong>Lu Tian</strong>, Patricia Drentea.
+        “The Role of Social Ties in the Cognitive Function of Informal Caregivers: Findings from a Population-Based Propensity-Matched Analysis”
+        (under review with <em>Journal of Aging and Research</em>)
+        <span class="pub-links">(
+          <a href="https://github.com/lu-tian-29840/Propensity-Score-Matching" target="_blank" rel="noopener">code</a>
+        )</span>.
         <p style="margin-top:8px;">
-          This paper applies a causal-inference approach to address selection bias, using propensity-score matching together with
-          mediation analysis to investigate how social networks influence the link between caregiving and cognitive function among older
-          adults. The results indicate that older caregivers tend to have a greater number of close social ties, which are associated with
-          improved cognitive outcomes. In contrast, neither perceived social support nor the broader composition of one’s social network
-          demonstrated the same effect.
+          This paper applies a causal-inference approach to address selection bias, using propensity-score matching together
+          with mediation analysis to investigate how social networks influence the link between caregiving and cognitive function
+          among older adults. The results indicate that older caregivers tend to have a greater number of close social ties,
+          which are associated with improved cognitive outcomes. In contrast, neither perceived social support nor the broader
+          composition of one’s social network demonstrated the same effect.
         </p>
       </li>
     </ul>
@@ -94,8 +105,8 @@
     <h3>(3) Publications in Progress</h3>
     <ul>
       <li>
-        <strong>Lu Tian</strong>, Patricia Drentea, Fei Wu. “Association between Informal Caregiving and Biological Aging —
-        A Machine-Learning-based Approach to Biological Age Estimation.”
+        <strong>Lu Tian</strong>, Patricia Drentea, Fei Wu.
+        “Association between Informal Caregiving and Biological Aging — A Machine-Learning-based Approach to Biological Age Estimation.”
         <p style="margin-top:8px;">
           Using HRS psychosocial and clinic measurement data, I plan to derive a psychosocial biological age from validated scales.
           I will train an elastic-net model to predict mortality and functional decline, convert predicted risk to an age-equivalent,
@@ -107,13 +118,13 @@
       <li>
         <strong>Lu Tian</strong>. “A Review of Family Caregiving and Biological Aging.”
         <p style="margin-top:8px;">
-          I am writing a scoping review to understand how caregiving may affect biological aging, focusing on three broad and clinically
-          meaningful measures rather than a single biomarker like telomere length. First, DNA methylation clocks (e.g., PhenoAge, GrimAge)
-          estimate biological age from DNA patterns and often predict health outcomes better than earlier biomarkers. Second, intrinsic
-          capacity captures the combined physical and mental abilities a person can draw on at a given time—mobility, cognition, sensory
-          function, vitality, and mood. Third, frailty reflects vulnerability as physiological reserves diminish and is a practical indicator
-          of risk in older adults. These measures are chosen because they are consistently linked with health outcomes and lend themselves
-          to action in geriatric care more readily than narrow biomarkers.
+          I am writing a scoping review to understand how caregiving may affect biological aging, focusing on three broad and
+          clinically meaningful measures rather than a single biomarker like telomere length. First, DNA methylation clocks
+          (e.g., PhenoAge, GrimAge) estimate biological age from DNA patterns and often predict health outcomes better than earlier
+          biomarkers. Second, intrinsic capacity captures the combined physical and mental abilities a person can draw on at a given
+          time—mobility, cognition, sensory function, vitality, and mood. Third, frailty reflects vulnerability as physiological
+          reserves diminish and is a practical indicator of risk in older adults. These measures are chosen because they are
+          consistently linked with health outcomes and lend themselves more readily to clinical action in geriatric care.
         </p>
       </li>
     </ul>
