@@ -1,48 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Lu Tian</title>
-  <link rel="stylesheet" href="css/main.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>LU TIAN</title>
+  <!-- your stylesheet path from /css -->
+  <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-  <div class="site-header">
-    <div class="site-title">LU TIAN</div>
-    <nav>
-      <a href="index.html">About</a>
-      <a href="research/index.html">Research</a>
-      <a href="teaching/index.html">Teaching</a>
-      <a href="cv/index.html">CV</a>
-    </nav>
-  </div>
-  <div class="container">
+  <!-- Tiny include: pulls in /nav.html -->
+  <div id="nav"></div>
+  <script>
+    fetch('/nav.html').then(r=>r.text()).then(h=>{
+      document.getElementById('nav').outerHTML = h;
+      const path = location.pathname.replace(/index\.html$/,'') || '/';
+      document.querySelectorAll('nav a').forEach(a=>{
+        if (a.getAttribute('href') === path) a.style.textDecoration = 'underline';
+      });
+    });
+  </script>
+
+  <!-- ABOUT CONTENT (unchanged) -->
+  <main class="container">
     <div class="profile">
       <div>
-        <img src="Head shot_10272019.jpg" alt="Lu Tian photo" class="profile-pic">
-        <div class="profile-email">
-          ltian2@uab.edu<br>
-          lutian29840@gmail.com
-        </div>
+        <!-- If you keep the space in the filename, encode it as %20 -->
+        <img class="profile-pic" src="/Head%20shot_10272019.jpg" alt="Lu Tian">
+        <div class="profile-email">ltian2@uab.edu<br>lutian29840@gmail.com</div>
       </div>
+
       <div>
-        <p>
-          Hi! I’m Lu Tian, a medical sociologist on a heartfelt journey toward becoming a scientist in aging research. 
-          I explore how social determinants shape health disparities, with a focus on caregiving, social support, health behaviors, and biological aging.
-          I’m passionate about using up-to-date statistical methods to deepen our understanding of aging and extend healthy lifespan.<br>
-          When I’m not analyzing data or discussing social patterns, I find joy in staying connected, learning from others, and letting optimism guide my work.
-        </p>
+        <p>Hi! I’m Lu Tian, a medical sociologist on a heartfelt journey toward becoming a scientist in aging research. I explore how social determinants shape health disparities, with a focus on caregiving, social support, health behaviors, and biological aging. I’m passionate about using up-to-date statistical methods to deepen our understanding of aging and extend healthy lifespan.</p>
+
+        <p>When I’m not analyzing data or discussing social patterns, I find joy in staying connected, learning from others, and letting optimism guide my work.</p>
+
         <h3>Research Interests</h3>
-        <p>
-          Social determinants of health disparities, aging and the life course, biomarkers, chronic stressors, and social networks.
-        </p>
+        <p>Social determinants of health disparities, aging and the life course, biomarkers, chronic stressors, and social networks.</p>
+
         <h3>Contact</h3>
         <p>
-          ltian2@uab.edu<br>
-          lutian29840@gmail.com
+          <a href="mailto:ltian2@uab.edu">ltian2@uab.edu</a><br>
+          <a href="mailto:lutian29840@gmail.com">lutian29840@gmail.com</a>
         </p>
       </div>
     </div>
-  </div>
+  </main>
 </body>
 </html>
