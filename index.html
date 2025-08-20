@@ -1,49 +1,89 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>LU TIAN</title>
-  <!-- your stylesheet path from /css -->
-  <link rel="stylesheet" href="/css/main.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lu Tian</title>
+  <style>
+    :root { --text:#333; --muted:#666; --link:#999; }
+    html, body { padding:0; margin:0; }
+    body {
+      margin: 60px auto;
+      width: 70%;
+      max-width: 900px;
+      color: var(--text);
+      font-family: Palatino, "Palatino Linotype", "Helvetica", "Arial", sans-serif;
+      line-height: 1.6;
+    }
+
+    header h1 { margin: 0 0 .25rem 0; font-size: 2rem; letter-spacing: .02em; }
+    .contacts { margin: .25rem 0 2rem 0; color: var(--muted); font-size: .95rem; }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .about {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .avatar {
+      width: 240px;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+    }
+
+    p, ul { font-size: 1.15rem; }
+    h2 { margin-top: 2rem; font-size: 1.35rem; }
+
+    @media (max-width: 720px) {
+      body { width: 88%; margin: 32px auto; }
+      .about { grid-template-columns: 1fr; }
+      .avatar { width: 200px; margin: 0 auto; }
+    }
+  </style>
 </head>
 <body>
-  <!-- Tiny include: pulls in /nav.html -->
-  <div id="nav"></div>
-  <script>
-    fetch('/nav.html').then(r=>r.text()).then(h=>{
-      document.getElementById('nav').outerHTML = h;
-      const path = location.pathname.replace(/index\.html$/,'') || '/';
-      document.querySelectorAll('nav a').forEach(a=>{
-        if (a.getAttribute('href') === path) a.style.textDecoration = 'underline';
-      });
-    });
-  </script>
+  <header>
+    <h1>LU TIAN</h1>
+    <div class="contacts">
+      <a href="mailto:ltian2@uab.edu">ltian2@uab.edu</a> &nbsp;•&nbsp;
+      <a href="mailto:lutian29840@gmail.com">lutian29840@gmail.com</a>
+    </div>
+  </header>
 
-  <!-- ABOUT CONTENT (unchanged) -->
-  <main class="container">
-    <div class="profile">
-      <div>
-        <!-- If you keep the space in the filename, encode it as %20 -->
-        <img class="profile-pic" src="/Head%20shot_10272019.jpg" alt="Lu Tian">
-        <div class="profile-email">ltian2@uab.edu<br>lutian29840@gmail.com</div>
-      </div>
+  <main>
+    <section class="about">
+      <!-- Keep the selfie prominent, like your current page -->
+      <a href="Head%20shot_10272019.jpg" title="View full-size">
+        <img class="avatar" src="Head%20shot_10272019.jpg" alt="Lu Tian headshot" />
+      </a>
 
       <div>
-        <p>Hi! I’m Lu Tian, a medical sociologist on a heartfelt journey toward becoming a scientist in aging research. I explore how social determinants shape health disparities, with a focus on caregiving, social support, health behaviors, and biological aging. I’m passionate about using up-to-date statistical methods to deepen our understanding of aging and extend healthy lifespan.</p>
-
-        <p>When I’m not analyzing data or discussing social patterns, I find joy in staying connected, learning from others, and letting optimism guide my work.</p>
-
-        <h3>Research Interests</h3>
-        <p>Social determinants of health disparities, aging and the life course, biomarkers, chronic stressors, and social networks.</p>
-
-        <h3>Contact</h3>
         <p>
-          <a href="mailto:ltian2@uab.edu">ltian2@uab.edu</a><br>
-          <a href="mailto:lutian29840@gmail.com">lutian29840@gmail.com</a>
+          Hi! I’m Lu Tian, a medical sociologist on a journey toward becoming a scientist in aging research.
+          I explore how social determinants shape health disparities, with a focus on caregiving, social support,
+          health behaviors, and biological aging. I’m passionate about using up-to-date statistical methods to deepen
+          our understanding of aging and extend healthy lifespan.
+        </p>
+
+        <p>
+          When I’m not analyzing data or discussing social patterns, I find joy in staying connected, learning from
+          others, and letting curiosity and connection guide my work.
         </p>
       </div>
-    </div>
+    </section>
+
+    <h2>Research Interests</h2>
+    <p>Social determinants of health disparities; aging and the life course; biomarkers; chronic stressors; and social networks.</p>
+
+    <h2>Contact</h2>
+    <p>
+      <a href="mailto:ltian2@uab.edu">ltian2@uab.edu</a><br />
+      <a href="mailto:lutian29840@gmail.com">lutian29840@gmail.com</a>
+    </p>
   </main>
 </body>
 </html>
