@@ -4,7 +4,22 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Lu Tian</title>
-  <link rel="stylesheet" href="/style.css" />
+
+  <!-- Use your existing stylesheet -->
+  <link rel="stylesheet" href="/css/style.css" />
+
+  <!-- About-page-only tweaks to match the Research header/nav sizing and keep the selfie exact.
+       This does NOT change your global CSS. -->
+  <style>
+    /* Header & nav (match the visual scale you have on /research) */
+    .site-title { font-size: 3.4rem; letter-spacing: 5px; }
+    nav a { font-size: 1.2rem; }
+
+    /* Selfie block to mirror the attached layout */
+    .profile { display: flex; align-items: flex-start; gap: 48px; }
+    .profile-pic { width: 230px; height: 230px; object-fit: cover; }
+    .container { max-width: 1000px; }
+  </style>
 </head>
 <body>
   <!-- Header + Nav -->
