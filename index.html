@@ -4,21 +4,27 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Lu Tian</title>
-  <meta name="description" content="Lu Tian — medical sociologist focusing on caregiving, social networks, and biological aging." />
+  <meta name="description" content="Lu Tian — medical sociologist focusing on caregiving, social networks, and biological aging.">
   <style>
-    /* ===== Base ===== */
+    /* ===== Shared look used on ALL pages ===== */
     :root{
-      --bg:#f3f4f6;        /* light gray page background */
-      --text:#111827;      /* gray-900 */
-      --muted:#6b7280;     /* gray-500 */
-      --muted-2:#9ca3af;   /* gray-400 */
-      --link:#374151;      /* gray-700 */
+      --bg:#f3f4f6;          /* page background */
+      --text:#111827;        /* gray-900 */
+      --muted:#6b7280;       /* gray-500 */
+      --muted-2:#9ca3af;     /* gray-400 */
+      --link:#374151;        /* gray-700 */
+      --border:#e5e7eb;      /* gray-200 */
       --card:#ffffff;
-      --border:#e5e7eb;    /* gray-200 */
-      --shadow: 0 14px 28px rgba(0,0,0,.10), 0 3px 8px rgba(0,0,0,.06);
+      --shadow:0 14px 28px rgba(0,0,0,.10), 0 3px 8px rgba(0,0,0,.06);
       --radius:18px;
       --radius-img:14px;
       --maxw: 980px;
+
+      /* >>> Easy knobs for what you asked about <<< */
+      --brand-size: 44px;    /* "LU TIAN" size (same on all pages) */
+      --brand-color: #6b7280;/* muted grey for the name */
+      --nav-size: 16px;      /* nav link size (same on all pages) */
+      --nav-underline: 2px;  /* thickness of the active underline */
     }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0}
@@ -32,99 +38,52 @@
     a{color:var(--link);text-decoration:none}
     a:hover{text-decoration:underline}
 
-    /* ===== Header ===== */
-    .site{
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 28px 20px 48px;
-    }
-    .brand{
-      text-align:center;
-      margin-top: 8px;
-    }
+    .site{max-width:var(--maxw);margin:0 auto;padding:28px 20px 48px}
+    .brand{ text-align:center; margin-top:8px; }
     .brand h1{
-      margin: 8px 0 6px;
-      font-size: 44px;
-      font-weight: 600;
-      letter-spacing: .18em;
-      color:#6b7280; /* muted gray like screenshot */
-    }
-
-    /* ===== Top Nav ===== */
-    nav{
-      display:flex;
-      justify-content:center;
-      gap: 28px;
-      padding: 10px 0 16px;
-      border-bottom:1px solid var(--border);
-      margin-bottom: 28px;
-    }
-    nav a{
-      font-size:15px;
-      color: var(--muted);
-      padding: 6px 2px;
-    }
-    nav a[aria-current="page"]{
-      color: var(--text);
+      margin:8px 0 6px;
+      font-size:var(--brand-size);
       font-weight:600;
-      border-bottom: 2px solid var(--text);
+      letter-spacing:.18em;
+      color:var(--brand-color);
     }
 
-    /* ===== Card ===== */
+    nav{
+      display:flex; justify-content:center; gap:28px;
+      padding:10px 0 16px; border-bottom:1px solid var(--border); margin-bottom:28px;
+    }
+    nav a{ font-size:var(--nav-size); color:var(--muted); padding:6px 2px; }
+    nav a[aria-current="page"]{
+      color:var(--text); font-weight:600;
+      border-bottom:var(--nav-underline) solid var(--text);
+    }
+
     .card{
-      background: var(--card);
-      border:1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 28px;
-      margin: 0 auto 56px;
+      background:var(--card); border:1px solid var(--border);
+      border-radius:var(--radius); box-shadow:var(--shadow);
+      padding:28px; margin:0 auto 56px;
     }
-    .grid{
-      display:grid;
-      grid-template-columns: 250px 1fr;
-      gap: 28px;
-      align-items:start;
-    }
+    .grid{ display:grid; grid-template-columns:250px 1fr; gap:28px; align-items:start; }
 
-    /* Left column (photo + emails) */
-    .avatar{
-      width: 220px;
-      height: auto;
-      display:block;
-      border-radius: var(--radius-img);
-      box-shadow: 0 2px 6px rgba(0,0,0,.08);
-      margin: 0 auto 14px;
-    }
+    .avatar{ width:220px; height:auto; display:block; border-radius:var(--radius-img);
+             box-shadow:0 2px 6px rgba(0,0,0,.08); margin:0 auto 14px; }
     .emails{
       text-align:center;
       font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
-      font-size: 13px;
-      color: var(--muted-2);
-      line-height:1.5;
-      word-break: break-word;
+      font-size:13px; color:var(--muted-2); line-height:1.5; word-break:break-word;
     }
 
-    /* Right column (text) */
-    .lead{margin:0 0 12px 0}
-    h2{
-      font-size: 18px;
-      margin: 18px 0 6px;
-      font-weight:700;
-      color:#1f2937; /* gray-800 */
-    }
-    p{margin:0 0 12px 0}
+    h2{ font-size:18px; margin:18px 0 6px; font-weight:700; color:#1f2937; }
+    p{ margin:0 0 12px 0; }
+    .lead{ margin:0 0 12px 0; }
 
-    /* ===== Footer spacing (optional) ===== */
-    .footspace{height: 24px}
-
-    /* ===== Responsive ===== */
-    @media (max-width: 800px){
-      .grid{grid-template-columns: 1fr}
-      .avatar{width: 180px}
-      .site{padding: 18px 16px 36px}
-      .brand h1{font-size: 36px; letter-spacing: .14em;}
-      nav{gap:18px}
-      .card{padding:20px}
+    @media (max-width:800px){
+      .grid{ grid-template-columns:1fr; }
+      .avatar{ width:180px; }
+      .site{ padding:18px 16px 36px; }
+      .brand h1{ font-size:36px; letter-spacing:.14em; }
+      nav{ gap:18px; }
+      .card{ padding:20px; }
     }
   </style>
 </head>
@@ -135,7 +94,6 @@
     </header>
 
     <nav aria-label="Primary">
-      <!-- Mark the current page with aria-current="page" -->
       <a href="/" aria-current="page">About</a>
       <a href="/research/">Research</a>
       <a href="/teaching/">Teaching</a>
@@ -144,7 +102,6 @@
 
     <main class="card" role="main">
       <div class="grid">
-        <!-- Left column: selfie + emails -->
         <div>
           <a href="Head%20shot_10272019.jpg" title="View full-size">
             <img class="avatar" src="Head%20shot_10272019.jpg" alt="Portrait of Lu Tian">
@@ -155,32 +112,5 @@
           </div>
         </div>
 
-        <!-- Right column: text -->
         <div>
           <p class="lead">
-            Hi! I’m Lu Tian, a medical sociologist on a journey toward becoming a scientist in aging research.
-            I explore how social determinants shape health disparities, with a focus on caregiving, social support,
-            health behaviors, and biological aging. I’m passionate about using up-to-date statistical methods to deepen
-            our understanding of aging and extend healthy lifespan.
-          </p>
-          <p>
-            When I’m not analyzing data or discussing social patterns, I find joy in staying connected, learning from others,
-            and letting curiosity and connection guide my work.
-          </p>
-
-          <h2>Research Interests</h2>
-          <p>Social determinants of health disparities, aging and the life course, biomarkers, chronic stressors, and social networks.</p>
-
-          <h2>Contact</h2>
-          <p>
-            <a href="mailto:ltian2@uab.edu">ltian2@uab.edu</a><br>
-            <a href="mailto:lutian29840@gmail.com">lutian29840@gmail.com</a>
-          </p>
-        </div>
-      </div>
-    </main>
-
-    <div class="footspace" aria-hidden="true"></div>
-  </div>
-</body>
-</html>
